@@ -15,6 +15,7 @@ local Window = Fluent:CreateWindow({
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Dead = Window:AddTab({ Title = "Deadly Delivery", Icon = "building" }),
+    3am = Window:AddTab({ Title = "After 3am", Icon = "activity" }),
 	Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
@@ -31,6 +32,11 @@ do end
 
 
     Tabs.Dead:AddParagraph({
+        Title = "Information",
+        Content = "Use an Executor That Has 99-100% Unc And Sunc For A Better Experience"
+    })
+
+  Tabs.3am:AddParagraph({
         Title = "Information",
         Content = "Use an Executor That Has 99-100% Unc And Sunc For A Better Experience"
     })
@@ -86,6 +92,30 @@ do end
         end
     })
 
+    Tabs.3am:AddButton({
+        Title = "No Keyless",
+        Description = "Infinite Ammo, Fullbright, Infinite Full And More",
+        Callback = function()
+            Window:Dialog({
+                Title = "Information",
+                Content = "Please Wait Until Update!",
+                Buttons = {loadstring(game:HttpGet("https://raw.githubusercontent.com/kaghnoa/Scripts/refs/heads/main/Obf_ultrabyxosssjk.after3am"))()
+                    {
+                        Title = "Confirm",
+                        Callback = function(v)
+                            print("Next Update,Plase Wait")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function(v)
+                            print("Cancelled,Are You Sure?")
+                        end
+                    }
+                }
+            })
+        end
+    })
 
 
 -- SaveManager (Allows you to have a configuration system)end

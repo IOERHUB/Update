@@ -15,7 +15,7 @@ local Window = Fluent:CreateWindow({
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Dead = Window:AddTab({ Title = "Deadly Delivery", Icon = "building" }),
-    3am = Window:AddTab({ Title = "After 3am", Icon = "activity" }),
+    am = Window:AddTab({ Title = "After 3am", Icon = "activity" }),
 	Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
@@ -36,7 +36,7 @@ do end
         Content = "Use an Executor That Has 99-100% Unc And Sunc For A Better Experience"
     })
 
-  Tabs.3am:AddParagraph({
+  Tabs.am:AddParagraph({
         Title = "Information",
         Content = "Use an Executor That Has 99-100% Unc And Sunc For A Better Experience"
     })
@@ -92,7 +92,7 @@ do end
         end
     })
 
-    Tabs.3am:AddButton({
+    Tabs.am:AddButton({
         Title = "No Keyless",
         Description = "Infinite Ammo, Fullbright, Infinite Full And More",
         Callback = function()
